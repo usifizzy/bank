@@ -35,7 +35,8 @@ namespace ase_bank
         * */
         public void Debit(double amount)
         {
-            throw new NotImplementedException();
+            m_balance -= amount;
+            // throw new NotImplementedException();
         }
 
         /**
@@ -43,7 +44,8 @@ namespace ase_bank
          * */
         public void Credit(double amount)
         {
-            throw new NotImplementedException();
+            m_balance += amount;
+               // throw new NotImplementedException();
         }
 
         public void FreezeAccount()

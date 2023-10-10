@@ -8,9 +8,13 @@ namespace BankTests
     [TestClass]
     public class BankAccountTests
     {
+        /// <summary>
+        /// Test method to test credit with valid amount
+        /// </summary>
         [TestMethod]
         public void Credit_WithValidAmount_UpdatesBalance()
         {
+          
             // arrange
             double beginningBalance = 11.99;
             double creditAmount = 4.55;
@@ -24,7 +28,9 @@ namespace BankTests
             double actual = account.Balance;
             Assert.AreEqual(expected, actual, 0.001, "Account not credited correctly");
         }
-
+        /// <summary>
+        /// test for credit with zero amount
+        /// </summary>
         [TestMethod]
         public void Credit_WithZeroAmount_DoesNotUpdateBalance()
         {
